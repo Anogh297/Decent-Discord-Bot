@@ -1,0 +1,22 @@
+{
+  "name": "decent-bot",
+  "version": "1.0.0",
+  "description": "A Decent Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"This works\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruvin-Purohit/Decent-Discord-Bot.git"
+  },
+  "keywords": [
+    "Decent"
+  ],
+  "author": "Dhruvin Purohit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dhruvin-Purohit/Decent-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/Dhruvin-Purohit/Decent-Discord-Bot#readme"
+}
