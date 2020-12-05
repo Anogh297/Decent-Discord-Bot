@@ -4,3 +4,6 @@ package-lock.json
 
 # Well...
 config.json
+
+# My Custom Stupid stuff
+cache
