@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Dhruvin-Purohit/Decent-Discord-Bot#readme",
   "dependencies": {
-    "discord-akairo": "^8.1.0",
+    "discord-akairo": "github:Dhruvin-Purohit/discord-akairo",
     "discord-md-tags": "^1.0.0",
     "discord.js": "^12.5.1"
   }

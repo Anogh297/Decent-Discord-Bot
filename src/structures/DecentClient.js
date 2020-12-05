@@ -4,7 +4,8 @@ const config = require('../../config.json')
 class DecentClient extends ak.AkairoClient {
     constructor(Config) {
         super({
-            ownerID: config.bot.ownerids
+            ownerID: config.bot.ownerids,
+            developerID: config.bot.developerids
         })
         this.ListenerHandler = new ak.ListenerHandler(this, {
             directory: './listeners'
@@ -16,6 +17,18 @@ class DecentClient extends ak.AkairoClient {
             blockBots: true,
             blockClient: true,
             commandUtil: true,
+            argumentDefaults: {
+            prompt: {
+                modifyStart: (_, str) => `${str}\n\nType \`stop\` to stop the command`,
+                retry: `Try again...`,
+                timeout: `Alright then Ignore me even i don't have enough free time to keep waiting for you`,
+                ended: `You have exceeded the maximum amount of retries...`,
+                cancel: `Alright then Stopped the command`,
+                cancelWord: 'stop',
+                retries: 3,
+                time: 3e4
+                }
+            },
             automateCategories: true
         })
         this.Config = Config
@@ -32,12 +45,8 @@ class DecentClient extends ak.AkairoClient {
 
         this.developers = config.developers
 
-    }
+        this.fn = require('../utils/functions')
 
-    async isDeveloper(user) {
-        if (this.isOwner(user)) return true
-        else if (this.developers.includes(user.id)) return true
-        else return false
     }
 
     async _init() {
